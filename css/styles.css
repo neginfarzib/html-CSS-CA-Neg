@@ -8,10 +8,27 @@
 body {
   color: var(--color-primary);
   background-color: FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#background_first{
+  background-image: url(../assets/images/Norronare.png);
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 3%;
+}
+
+#background_second{
+  background-image: url(../assets/images/extreme-rain.jpg);
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 3%;
 }
 
 .navbar {
-  background: white; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background: white;
 }
 
 .navdiv {
@@ -33,22 +50,6 @@ body {
   color: black; font-size: 18px; font-weight: bold; margin-right: 25px;
 }
 
-#first_background{
-
-  background-image:  url('../assets/images/Norronare.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  
-}
-
-#second_background{
-
-  background-image: url('../assets/images/extreme-rain.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
 
  footer{
   background-color: #053541 ;
@@ -111,4 +112,61 @@ body {
 
 }
 
+#background{
+  background-image: url(../assets/images/pexels-photo-433142.jpeg);
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 3%;
+}
 
+.row{
+  display: flex;
+}
+
+.column{
+  background-color: #F5F5F5;
+  flex: 25.00%;
+  padding: 5px;
+  margin: 5px;
+  border: black 1px solid;
+}
+
+#backgroundw{
+  background-image: url(../assets/images/istockphoto-1318164337-612x612.jpg);
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 3%;
+}
+
+
+
+#background_success{
+  background-image: url(../assets/images/success1.jfif);
+  min-height: 6 0vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 3%;
+}
+
+.item{
+  border: 1px, #3B515E, solid;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+}
+
+#background_about{
+  background-image: url(../assets/images/about-us.webp);
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 3%;
+}
+
+.sizes{
+  border: solid rgb(99, 98, 98) 1px;
+  padding: 5px;
+  margin: 1px;
+}
