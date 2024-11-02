@@ -9,6 +9,9 @@ body {
   color: var(--color-primary);
   background-color: FFFFFF;
   font-family: Arial, Helvetica, sans-serif;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 #background_first{
@@ -61,7 +64,6 @@ body {
 }
 
 .footercontainer{
-  position: fixed;
   left: 0;
   bottom: 0;
   display: flex;
