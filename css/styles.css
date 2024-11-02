@@ -47,9 +47,14 @@ body {
 }
 
 .navdiv ul li a {
-  color: black; font-size: 18px; font-weight: bold; margin-right: 25px;
+  color: black; font-size: 12px; font-weight: bold; margin-right: 15px;
 }
 
+.navbar-image{
+  position: relative;
+  top: 5px;
+  margin-right: 15px;
+}
 
  footer{
   background-color: #053541 ;
