@@ -30,12 +30,64 @@ body {
   margin-bottom: 3%;
 }
 
+nav, #menu-checkbox{
+  display: none;
+}
+
+#menu-checkbox:checked ~ nav {
+  display: block;
+}
+
+
+header{
+  position:relative;
+  background: rgb(56,56,56);
+  color: #fff;
+  padding: 10px;
+  font-size: 1.5rem;
+}
+
+nav{
+  position:absolute;
+  background: rgb(56,56,56);
+  left: 0px;
+
+}
+
+nav a{
+  display: block;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 1rem
+}
+
+
+@media (min-width: 600px){
+  nav{
+    display: block;
+    position: static;
+  }
+  .hamburger-icon{
+    display: none;
+  }
+
+  nav a{
+    display: inline-block;
+  }
+}
+
+
+
+
 .navbar {
   background: white;
+  padding: 10px;
 }
 
 .navdiv {
-  display: flex; align-items: center; justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .logo {
@@ -44,13 +96,19 @@ body {
 
 .navdiv ul {
   align-items:center ;
+  list-style: none;
+  display: flex;
+  gap: 15px;
 }
 .navdiv ul li {
   list-style: none; display: inline-block;
 }
 
 .navdiv ul li a {
-  color: black; font-size: 12px; font-weight: bold; margin-right: 15px;
+  color: black;
+  font-size: 12px;
+  font-weight: bold;
+  margin-right: 15px;
 }
 
 .navbar-image{
