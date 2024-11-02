@@ -142,6 +142,13 @@ body {
   border: black 1px solid;
 }
 
+.column-show-item{
+  background-color:white;
+  flex: 25.00%;
+  padding: 5px;
+  margin: 5px;
+}
+
 #backgroundw{
   background-image: url(../assets/images/istockphoto-1318164337-612x612.jpg);
   min-height: 100vh;
@@ -161,9 +168,8 @@ body {
 }
 
 .item{
-  border: 1px, #3B515E, solid;
-  padding: 10px;
-  margin: 10px;
+  padding: 0px;
+  margin: 0px;
   text-align: center;
 }
 
@@ -194,4 +200,21 @@ body {
 
 .contact-label{
   border: 1px solid rgb(80, 79, 79) 
+}
+
+hr.solid {
+  border-top: 1px solid gray;
+}
+a.button {
+  padding: 1px 6px;
+  border: 1px outset buttonborder;
+  color: white;
+  background-color: black;
+  text-decoration: none;
+  font-size: xx-small;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  height: 30px;
 }
