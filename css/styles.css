@@ -192,6 +192,14 @@ nav a{
   border: black 1px solid;
 }
 
+.column a{
+  display: flex; 
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  text-decoration: none;
+}
+
 .column-show-item{
   background-color:white;
   flex: 25.00%;
