@@ -35,4 +35,31 @@ async function getMenProducts() {
     }
 }
 
-getMenProducts();
+document.addEventListener('DOMContentLoaded',async () => {
+    const productContainer = document.getElementById('product-container');
+
+    const products = await allProducts();
+    products.data.forEach((product) => {
+        const productBox = document.createElement('div');
+        productBox.classList.add('product-box');
+
+        // Create and append product image
+        const productImage = document.createElement('img');
+        productImage.src = product.image.url;
+        productImage.alt = product.image.alt;
+        productBox.appendChild(productImage);
+
+        // Create and append product title
+        const productTitle = document.createElement('h3');
+        productTitle.textContent = product.title.replaceAll('Rainy Days ', '');
+        productBox.appendChild(productTitle);
+
+        // // Create and append product description
+        // const productDescription = document.createElement('p');
+        // productDescription.textContent = product.description;
+        // productBox.appendChild(productDescription);
+
+        // Append the product box to the container
+        productContainer.appendChild(productBox);
+    });
+})

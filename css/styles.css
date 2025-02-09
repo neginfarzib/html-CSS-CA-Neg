@@ -279,29 +279,36 @@ a.button {
   height: 30px;
 }
 
-.card {
-  background-color: #EF9A9A;
-  width: 150px;                 /* Set width of cards */
-  border: 1px solid #EF9A9A;    /* Set up Border */
-  border-radius: 4px;           /* Slightly Curve edges */
-  overflow: hidden;             /* Fixes the corners */
-  display: flex;                /* Children use Flexbox */
-  flex-direction: column;       /* Rotate Axis */
-}
-
-#product-container{
-  margin: 50px 0;
+#product-container {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
   gap: 20px;
-
+  padding: 20px;
 }
 
-@media (min-width: 600px) {
-  #product-container {
-    flex-direction: row;
-    justify-content: center;
-  }
+.product-box {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  padding: 15px;
+  text-align: center;
+}
+
+.product-box img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.product-box h3 {
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+
+.product-box p {
+  font-size: 1em;
+  color: #666;
 }
