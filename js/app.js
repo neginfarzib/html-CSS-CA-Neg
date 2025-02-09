@@ -1,6 +1,8 @@
-async function allProducts(url) {
+const all_product_url = "https://v2.api.noroff.dev/rainy-days";
+
+async function allProducts() {
     try {
-        const response = await fetch(url);
+        const response = await fetch(all_product_url);
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
@@ -27,7 +29,7 @@ function menProducts(productsData){
 }
 
 async function getMenProducts() {
-    const products = await allProducts("https://v2.api.noroff.dev/rainy-days");  
+    const products = await allProducts();
     if (products) {
         menProducts(products.data);  
     }
