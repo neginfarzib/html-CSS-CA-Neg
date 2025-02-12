@@ -37,29 +37,48 @@ async function getMenProducts() {
 
 document.addEventListener('DOMContentLoaded',async () => {
     const productContainer = document.getElementById('product-container');
+    const genderFilter = document.getElementById('gender-filter');
 
     const products = await allProducts();
-    products.data.forEach((product) => {
-        const productBox = document.createElement('div');
-        productBox.classList.add('product-box');
+    displayProducts(products.data);
 
-        // Create and append product image
-        const productImage = document.createElement('img');
-        productImage.src = product.image.url;
-        productImage.alt = product.image.alt;
-        productBox.appendChild(productImage);
+    function displayProducts(products){
+        console.log("products in displayProducts:", products);
+        productContainer.innerHTML = '';
+        products.forEach((product) => {
+            const productBox = document.createElement('div');
+            productBox.classList.add('product-box');
 
-        // Create and append product title
-        const productTitle = document.createElement('h3');
-        productTitle.textContent = product.title.replaceAll('Rainy Days ', '');
-        productBox.appendChild(productTitle);
+            const productImage = document.createElement('img');
+            productImage.src = product.image.url;
+            productImage.alt = product.image.alt;
+            productBox.appendChild(productImage);
 
-        // // Create and append product description
-        // const productDescription = document.createElement('p');
-        // productDescription.textContent = product.description;
-        // productBox.appendChild(productDescription);
+            const productPriceTileDiv = document.createElement('div');
+            productBox.appendChild(productPriceTileDiv)
 
-        // Append the product box to the container
-        productContainer.appendChild(productBox);
-    });
+            const productTitle = document.createElement('h4');
+            productTitle.textContent = product.title.replaceAll('Rainy Days ', '');
+            productPriceTileDiv.appendChild(productTitle);
+
+            const productPrice = document.createElement('p');
+            productPrice.textContent = 'kr ' + product.price;
+            productPriceTileDiv.appendChild(productPrice);
+
+            // Append the product box to the container
+            productContainer.appendChild(productBox);
+        });
+    }
+
+
+    genderFilter.addEventListener('change', () => {
+        const selectedGender = genderFilter.value;
+        if (selectedGender === 'all') {
+            displayProducts(products.data);
+        } else {
+            const filteredProducts = products.data.filter(product => product.gender === selectedGender);
+            displayProducts(filteredProducts);
+        }
+    })
 })
+

@@ -288,8 +288,11 @@ a.button {
 }
 
 .product-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: #fff;
-  border: 1px solid #ddd;
+  border: black 1px solid;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   width: 300px;
@@ -303,12 +306,21 @@ a.button {
   border-radius: 5px;
 }
 
-.product-box h3 {
-  font-size: 1.5em;
+.product-box h4 {
   margin: 10px 0;
 }
 
 .product-box p {
-  font-size: 1em;
+  font-size: 0.90em;
   color: #666;
+}
+
+.filter-container {
+  font-size: x-large;
+  text-align: center;
+  margin: 50px;
+}
+
+.filter-container select{
+  font-size: medium;
 }
