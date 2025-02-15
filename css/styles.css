@@ -184,6 +184,9 @@ nav a{
 
 .row{
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 .column{
@@ -323,4 +326,9 @@ a.button {
 
 .filter-container select{
   font-size: medium;
+}
+
+#product-img-big {
+  max-width: 500px;
+  height: auto;
 }

@@ -49,13 +49,17 @@ document.addEventListener('DOMContentLoaded',async () => {
             const productBox = document.createElement('div');
             productBox.classList.add('product-box');
 
+            const productHref = document.createElement('a');
+            productHref.href = 'product.html?product-id='+ product.id;
+            productBox.appendChild(productHref);
+
             const productImage = document.createElement('img');
             productImage.src = product.image.url;
             productImage.alt = product.image.alt;
-            productBox.appendChild(productImage);
+            productHref.appendChild(productImage);
 
             const productPriceTileDiv = document.createElement('div');
-            productBox.appendChild(productPriceTileDiv)
+            productHref.appendChild(productPriceTileDiv)
 
             const productTitle = document.createElement('h4');
             productTitle.textContent = product.title.replaceAll('Rainy Days ', '');
