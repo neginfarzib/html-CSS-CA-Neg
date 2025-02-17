@@ -244,12 +244,6 @@ nav a{
   margin-bottom: 3%;
 }
 
-.sizes{
-  border: solid rgb(99, 98, 98) 1px;
-  padding: 5px;
-  margin: 1px;
-}
-
 .add-cart-label{
   margin-bottom: 5%;
   display: flex;
@@ -331,4 +325,48 @@ a.button {
 #product-img-big {
   max-width: 500px;
   height: auto;
+}
+
+header .navbar-image  {
+  width: 20px;
+}
+header .navbar-quantity  {
+  width: 20px;
+  height: 20px
+}
+header .shopping{
+  position: relative;
+  text-align: right;
+}
+header .nav-menu span{
+  background-color: red;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
+  position: absolute;
+  top: -10px;
+  left: 1px;
+  padding: 3px 10px;
+  font-size: 12px;
+}
+
+
+.size-button {
+  border: solid rgb(99, 98, 98) 1px;
+  padding: 5px;
+  margin: 1px;
+
+  display: inline-block;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.size-button.hover {
+  background: lightgray;
+}
+
+.size-button.selected {
+  background: antiquewhite;
 }

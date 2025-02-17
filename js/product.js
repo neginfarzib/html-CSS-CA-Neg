@@ -14,13 +14,30 @@ async function getProducts(productId) {
     }
 }
 
+function addToCart(product) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    cart.push(product);
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+    const navbarQuantity = document.getElementById( 'navbar-quantity');
+    let navbarQuantityNumber = Number (navbarQuantity.textContent);
+    console.log(navbarQuantityNumber);
+    navbarQuantityNumber += 1;
+    navbarQuantity.textContent = navbarQuantityNumber;
+}
 
 
 document.addEventListener('DOMContentLoaded',async () => {
     const params = new URLSearchParams(window.location.search);
+    const addToCartElement = document.getElementById('add-to-cart');
     const productId = params.get("product-id");
 
     const product = await getProducts(productId);
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    updateCartCount();
 
     const productImgBig = document.getElementById('product-img-big');
     productImgBig.innerHTML = '';
@@ -56,8 +73,45 @@ document.addEventListener('DOMContentLoaded',async () => {
     for (const size of product.sizes) {
         const productSize = document.createElement('div');
         productSize.textContent = size;
-        productSize.classList.add('sizes');
+        productSize.classList.add('size-button');
+
+        productSize.addEventListener('mouseover', () => {
+            productSize.classList.add('hover');
+        });
+
+        productSize.addEventListener('mouseout', () => {
+            productSize.classList.remove('hover');
+        });
+
+        productSize.addEventListener('click', () => {
+            document.querySelectorAll('.size-button').forEach(btn => btn.classList.remove('selected'));
+
+            productSize.classList.add('selected');
+        });
+
         productSizes.appendChild(productSize);
+    }
+
+
+    addToCartElement.addEventListener("click", function (){
+        const selectedSizeElement = document.querySelector('.size-button.selected');
+
+        if (!selectedSizeElement) {
+            alert("Please select a size before adding to cart.");
+            return;
+        }
+
+        const selectedSize = selectedSizeElement.textContent;
+        console.log(`Selected Size: ${selectedSize}`);
+
+        const productWithSize = { ...product, selectedSize };
+
+        addToCart(productWithSize);
+    })
+
+    function updateCartCount() {
+        const navbarQuantity = document.getElementById( 'navbar-quantity');
+        navbarQuantity.textContent = cart.length;
     }
 
 })
