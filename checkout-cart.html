@@ -8,7 +8,6 @@
     <!-- For all browsers -->
     <link rel="icon" type="image/svg+xml" sizes="10x10" href="assets/images/RainyDays_logo.svg">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -27,62 +26,13 @@
                     <a href="women.html">Women</a>
                     <a href="contact.html">Contact us</a>
                     <a href="about.html">About us</a>
-                    <a href="checkout-cart.html">
-                        <div class="shopping" onclick=>
-                            <img class="navbar-image" src="assets/images/shoppingbasket.png"/>
-                            <span id="navbar-quantity" class="navbar-quantity">0</span>
-                        </div>
-                    </a>
+                    <img class="navbar-image" src="assets/images/shoppingbasket.png"
+                        style="width: 20px; height: 20px" />
                 </div>
             </div>
         </nav>
     </header>
-    <div>
-        <div style="text-align: left; margin-left: 2%;">
-            <h3 id="product-title-h3"></h3>
-        </div>
-
-        <div class="row">
-            <div class="column-show-item" >
-                <div class="column-show-item">
-                    <div class="item">
-                        <img id="product-img-big" src="" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="column-show-item" style="padding-left: 15%;">
-                <div>
-                    <p style="margin-bottom: 0px;"><b id="product-title-b"></b></p>
-                    <p style="margin-top: 0px;"><small>Nok </small><small id="product-price"></small></p>
-                </div>
-                <div style="text-align:left;">
-                    <p style="font-size: x-small;">color:</p><p id="product-color"></p>
-                </div>
-                <div style="text-align:left;">
-                    <p style="font-size: x-small;">Product Size:</p>
-                </div>
-                <div id="product-sizes" class="row" style="font-size:x-small; margin-bottom: 10%;">
-                    <div class="sizes">XS</div>
-                    <div class="sizes">S</div>
-                    <div class="sizes">M</div>
-                    <div class="sizes">L</div>
-                    <div class="sizes">XL</div>
-                </div>
-                <div class="row">
-                    <a href="#" id="add-to-cart" class="button">ADD TO CART</a>
-                </div>
-            </div>
-        </div>
-        <div>
-            <div style="width: 50%; margin: 8%;">
-                <hr class="solid">
-                <h5 id="product-title-h5"></h5>
-                <p id="product-description" style="font-size: small;">
-                </p>
-            </div>
-        </div>
-
-    </div>
+    <div id="checkout-card-container"></div>
     <div class="footercontainer">
         <div class="footernav">
             <div>
@@ -116,7 +66,7 @@
             </div>
         </div>
     </div>
-    <script src="js/product.js"></script>
+    <script src="js/checkout-cart.js"></script>
 </body>
 
 </html>
