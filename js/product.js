@@ -19,6 +19,9 @@ function addToCart(product) {
 
     cart.push(product);
 
+    const successMessage = document.getElementById('successMessage');
+    successMessage.style.display = 'block';
+
     localStorage.setItem("cart", JSON.stringify(cart));
     const navbarQuantity = document.getElementById( 'navbar-quantity');
     let navbarQuantityNumber = Number (navbarQuantity.textContent);
@@ -95,6 +98,8 @@ document.addEventListener('DOMContentLoaded',async () => {
 
     addToCartElement.addEventListener("click", function (){
         const selectedSizeElement = document.querySelector('.size-button.selected');
+        const successMessage = document.getElementById('successMessage');
+        successMessage.style.display = 'none';
 
         if (!selectedSizeElement) {
             alert("Please select a size before adding to cart.");
