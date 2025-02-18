@@ -22,12 +22,18 @@
                 </a>
                 <div class="nav-menu">
                     <a href="index.html">Home</a>
+<!--
                     <a href="men.html">Men</a>
                     <a href="women.html">Women</a>
+-->
                     <a href="contact.html">Contact us</a>
                     <a href="about.html">About us</a>
-                    <img class="navbar-image" src="assets/images/shoppingbasket.png"
-                        style="width: 20px; height: 20px" />
+                    <a href="add-to-cart.html">
+                        <div class="shopping" onclick=>
+                            <img class="navbar-image" src="assets/images/shoppingbasket.png"/>
+                            <span id="navbar-quantity" class="navbar-quantity">0</span>
+                        </div>
+                    </a>
                 </div>
             </div>
         </nav>
@@ -73,9 +79,11 @@
         <div class="footernav">
             <div>
                 <ul>
+<!--
                     <li>Shop</li>
                     <li><a href="women.html">Women</a></li>
                     <li><a href="men.html">Men</a></li>
+-->
                 </ul>
             </div>
             <div>
@@ -102,6 +110,7 @@
             </div>
         </div>
     </div>
+    <script src="js/cart-update.js"></script>
 </body>
 
 </html>

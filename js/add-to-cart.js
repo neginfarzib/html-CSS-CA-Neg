@@ -96,6 +96,19 @@ document.addEventListener('DOMContentLoaded',async () => {
             cartItemContainer.appendChild(document.createElement('hr'));
         });
     }
-    cartItemPriceTotal.textContent = 'Total : ' + cartItemPriceTotalNumber;
+    cartItemPriceTotal.textContent = 'Total : ' + cartItemPriceTotalNumber.toFixed(2);
+
+    document.addEventListener('click', function(event) {
+        if (event.target.matches('a.button')) {
+
+            if (isNaN(cartItemPriceTotalNumber) || Number(cartItemPriceTotalNumber) <= 0){
+                event.preventDefault();
+                alert('Total amount is 0')
+                return false;
+            }
+            localStorage.removeItem('cart')
+            return true;
+        }
+    });
 })
 
