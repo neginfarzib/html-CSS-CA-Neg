@@ -27,8 +27,12 @@
                     <a href="women.html">Women</a>
                     <a href="contact.html">Contact us</a>
                     <a href="about.html">About us</a>
-                    <img class="navbar-image" src="assets/images/shoppingbasket.png"
-                        style="width: 20px; height: 20px" />
+                    <a href="checkout-cart.html">
+                        <div class="shopping" onclick=>
+                            <img class="navbar-image" src="assets/images/shoppingbasket.png"/>
+                            <span id="navbar-quantity" class="navbar-quantity">0</span>
+                        </div>
+                    </a>
                 </div>
             </div>
         </nav>
@@ -67,52 +71,17 @@
                 </div>
             </div>
         </div>
-        <div class="column" style="border: 0px; background-color: white;">
-            <div style="background-color: rgb(223, 222, 222); padding:5%;">
-                <div style="display: flex; justify-content: space-between;">
-                    <div>
-                        <p>MY CART (1 ITEM)</p>
-                    </div>
-                    <div>
-                        <p> EDIT CART</p>
-                    </div>
-                </div>
+        <div  class="column" style="border: 0px; background-color: white;">
+            <div style="display: flex; justify-content: space-between;">
                 <div>
-                    <p><strong> JULLE LIGHT WATERPROOF JACKET</strong></p>
+                    <p id="cart-item-counter"></p>
                 </div>
-                <div style="display: flex; justify-content: space-between;">
-                    <div>
-                        <div>
-                            <p>Color : LILATECH</p>
-                        </div>
-                        <div>
-                            <p>Size: M</p>
-                        </div>
-                    </div>
-                    <div>
-                        <img src="assets/images/checkoutpage-main.webp">
-                    </div>
-                </div>
-                <div class="row" style="justify-content: space-between;">
-                    <div>
-                        <p>Total</p>
-                    </div>
-                    <div>
-                        <p>NOK 1.099</p>
-                    </div>
-                </div>
-                <div class="row" style="justify-content: space-between;">
-                    <div>
-                        <p>Shipping</p>
-                    </div>
-                    <div>
-                        <p>Free</p>
-                    </div>
-                </div>
+            </div>
+            <div id="cart-item-container">
             </div>
             <div style="text-align: center; margin-top: 20%;">
                 <div>
-                    <p><strong>Total : 1.099 </strong></p>
+                    <p><strong id="cart-item-price-total"></strong></p>
                 </div>
                 <div>
                     <a href="checkout-success.html" class="button">Pay order</a>
@@ -159,6 +128,8 @@
             </div>
         </div>
     </div>
+    <script src="js/add-to-cart.js"></script>
+    <script src="js/cart-update.js"></script>
 </body>
 
 </html>
