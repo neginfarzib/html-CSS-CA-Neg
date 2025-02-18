@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded',async () => {
         cartCheckoutContainer.appendChild(emptyCartListH)
 
     } else {
-        cartList.forEach((product) => {
+        cartList.forEach((product, index) => {
             const productBox = document.createElement('div');
             productBox.classList.add('checkout-product-box');
 
@@ -24,28 +24,29 @@ document.addEventListener('DOMContentLoaded',async () => {
             productImage.alt = product.image.alt;
             productHref.appendChild(productImage);
 
-            const productPriceTileDiv = document.createElement('div');
-            productHref.appendChild(productPriceTileDiv)
-
             const productTitle = document.createElement('h4');
             productTitle.textContent = product.title.replaceAll('Rainy Days ', '');
-            productPriceTileDiv.appendChild(productTitle);
-
-            const productPrice = document.createElement('p');
-            productPrice.textContent = 'kr ' + product.price;
-            productPriceTileDiv.appendChild(productPrice);
+            productBox.appendChild(productTitle);
 
             const productSelectedSize = document.createElement('p');
-            productSelectedSize.textContent = product.selectedSize;
-            productPriceTileDiv.appendChild(productSelectedSize);
+            productSelectedSize.textContent = "Size: " + product.selectedSize;
+            productBox.appendChild(productSelectedSize);
+
+            const productPrice = document.createElement('p');
+            productPrice.textContent = 'Price: kr ' + product.price;
+
+            productBox.appendChild(productPrice);
 
             const productRemoveButton = document.createElement('button');
             productRemoveButton.textContent = "Remove from cart";
+            productRemoveButton.addEventListener('click', () => {
+                let updatedCart = JSON.parse(localStorage.getItem("cart")) || [];
+                updatedCart.splice(index, 1);
+                localStorage.setItem("cart", JSON.stringify(updatedCart));
+                location.reload();
+            });
             productBox.appendChild(productRemoveButton);
 
-
-            const productCartSeparator = document.createElement('hr');
-            productBox.appendChild(productCartSeparator)
 
             cartCheckoutContainer.appendChild(productBox);
         });

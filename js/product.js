@@ -25,7 +25,6 @@ function addToCart(product) {
     console.log(navbarQuantityNumber);
     navbarQuantityNumber += 1;
     navbarQuantity.textContent = navbarQuantityNumber;
-    alert('Product successfully added to the cart!')
 }
 
 

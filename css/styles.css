@@ -373,21 +373,22 @@ header .nav-menu span{
 
 #checkout-card-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
   gap: 20px;
   padding: 20px;
 }
 
 .checkout-product-box {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
   background-color: #fff;
   width: 300px;
   padding: 15px;
   text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 5px;
 }
 
 .checkout-product-box img {
@@ -403,19 +404,15 @@ header .nav-menu span{
 .checkout-product-box p {
   font-size: 0.90em;
   color: #666;
-}
-
-.checkout-product-box hr {
-  border-top: 1px solid black;
-  margin: 10px 0;
+  margin: 5px 0;
 }
 
 .checkout-product-box button {
-  margin-left: auto;
   background: red;
   color: white;
   border: none;
   padding: 5px 10px;
+  margin-top: 10px;
   cursor: pointer;
 }
 
