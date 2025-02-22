@@ -46,9 +46,13 @@ function addToCart(product) {
 document.addEventListener('DOMContentLoaded',async () => {
     const params = new URLSearchParams(window.location.search);
     const addToCartElement = document.getElementById('add-to-cart');
+    const addToCartLoader = document.getElementById('product-loader');
     const productId = params.get("product-id");
 
     const product = await getProducts(productId);
+
+
+    addToCartLoader.style.display = 'none';
 
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 

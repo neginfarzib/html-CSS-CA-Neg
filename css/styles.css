@@ -224,7 +224,7 @@ nav a{
 
 #background_success{
   background-image: url(../assets/images/success1.jfif);
-  min-height: 6 0vh;
+  min-height: 60vh;
   background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: 3%;
@@ -480,4 +480,23 @@ hr {
   background-color: lightgreen;
   margin-top: 50px;
   padding: 10px;
+}
+
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3B515E;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.product-loader-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
