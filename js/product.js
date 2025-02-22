@@ -7,9 +7,22 @@ async function getProducts(productId) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
         const data = await response.json();
-        console.log(data);
         return data.data;
     } catch (error) {
+        const productContainer = document.getElementById('product-container');
+        const productErrorDiv = document.createElement('div');
+        productErrorDiv.classList.add('product-error');
+        const productError = document.createElement('p');
+        productError.classList.add('product-error-title');
+        productError.textContent = 'Something goes wrong!';
+        const productErrorDetails = document.createElement('p');
+        productErrorDetails.classList.add('product-error-details');
+        productErrorDetails.textContent = 'Please trying later or contact our support';
+        productErrorDiv.appendChild(productError);
+        productErrorDiv.appendChild(productErrorDetails);
+
+        productContainer.appendChild(productErrorDiv);
+
         console.error("Error fetching data:", error);
     }
 }
@@ -25,7 +38,6 @@ function addToCart(product) {
     localStorage.setItem("cart", JSON.stringify(cart));
     const navbarQuantity = document.getElementById( 'navbar-quantity');
     let navbarQuantityNumber = Number (navbarQuantity.textContent);
-    console.log(navbarQuantityNumber);
     navbarQuantityNumber += 1;
     navbarQuantity.textContent = navbarQuantityNumber;
 }
@@ -107,7 +119,6 @@ document.addEventListener('DOMContentLoaded',async () => {
         }
 
         const selectedSize = selectedSizeElement.textContent;
-        console.log(`Selected Size: ${selectedSize}`);
 
         const productWithSize = { ...product, selectedSize };
 

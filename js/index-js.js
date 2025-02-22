@@ -7,31 +7,23 @@ async function allProducts() {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
         const data = await response.json();
-        console.log(data);
         return data;
     } catch (error) {
+        const productContainer = document.getElementById('product-container');
+        const productErrorDiv = document.createElement('div');
+        productErrorDiv.classList.add('product-error');
+        const productError = document.createElement('p');
+        productError.classList.add('product-error-title');
+        productError.textContent = 'Something goes wrong!';
+        const productErrorDetails = document.createElement('p');
+        productErrorDetails.classList.add('product-error-details');
+        productErrorDetails.textContent = 'Please trying later or contact our support';
+        productErrorDiv.appendChild(productError);
+        productErrorDiv.appendChild(productErrorDetails);
+
+        productContainer.appendChild(productErrorDiv);
+
         console.error("Error fetching data:", error);
-    }
-}
-
-function menProducts(productsData){
-    const menProducts = [];
-
-    for(let i = 0; i < productsData.length; i++){
-        if(productsData[i].gender === "Male"){
-            menProducts.push(productsData[i]); 
-        }else{
-            console.log('NOt men §§§' + productsData[i].gender);
-        }
-    }
-
-    console.log(menProducts);
-}
-
-async function getMenProducts() {
-    const products = await allProducts();
-    if (products) {
-        menProducts(products.data);  
     }
 }
 
@@ -43,7 +35,6 @@ document.addEventListener('DOMContentLoaded',async () => {
     displayProducts(products.data);
 
     function displayProducts(products){
-        console.log("products in displayProducts:", products);
         productContainer.innerHTML = '';
         products.forEach((product) => {
             const productBox = document.createElement('div');

@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded',async () => {
     let cartList = JSON.parse(localStorage.getItem("cart")) || [];
     let cartCheckoutContainer = document.getElementById("checkout-card-container");
 
-    console.log(cartList);
     if (cartList.length === 0) {
         const emptyCartListH = document.createElement('h2');
         emptyCartListH.textContent = "Your cart is empty!";
