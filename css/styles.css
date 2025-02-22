@@ -297,6 +297,14 @@ a.button {
   text-align: center;
 }
 
+.product-box a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+
 .product-box img {
   max-width: 100%;
   height: auto;
