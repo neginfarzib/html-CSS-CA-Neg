@@ -9,6 +9,9 @@ async function allProducts() {
         const data = await response.json();
         return data;
     } catch (error) {
+        const productLoader = document.getElementById('product-loader');
+        productLoader.style.display = 'none';
+
         const productContainer = document.getElementById('product-container');
         const productErrorDiv = document.createElement('div');
         productErrorDiv.classList.add('product-error');
