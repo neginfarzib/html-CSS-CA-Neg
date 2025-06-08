@@ -34,6 +34,7 @@ An online raincoat store for men and women with smooth navigation, add-to-cart, 
 - ## Built with  
 - HTML
 - CSS
+- JavaScript
 
 ## Process
 
