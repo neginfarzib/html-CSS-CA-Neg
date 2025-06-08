@@ -39,91 +39,83 @@
             </div>
         </nav>
     </header>
-    <div class="row">
-        <div class="column" style="padding: 5%; border: 0px; background-color: white;">
-            <h1>SHIPPING</h1>
-            <div>
-                <h4>Customer Info</h4>
-                <div class="add-cart-label">
-                    <label for="email">Email Address:</label>
-                    <input type="text" id="email" name="email">
+    <main>
+        <div class="row">
+            <div class="column shipping-container" >
+                <h1>SHIPPING</h1>
+                <div>
+                    <h4>Customer Info</h4>
+                    <div class="add-cart-label">
+                        <label for="email">Email Address:</label>
+                        <input type="text" id="email" name="email">
+                    </div>
+                    <div class="add-cart-label">
+                        <label for="fname">First Name:</label>
+                        <input type="text" id="fname" name="fname">
+                    </div>
+                    <div class="add-cart-label">
+                        <label for="fname">Last Name:</label>
+                        <input type="text" id="lname" name="fname">
+                    </div>
+                    <div class="add-cart-label">
+                        <label for="mobile">Mobile phone Number:</label>
+                        <input type="text" id="phone" name="phone">
+                    </div>
                 </div>
-                <div class="add-cart-label">
-                    <label for="fname">First Name:</label>
-                    <input type="text" id="fname" name="fname">
-                </div>
-                <div class="add-cart-label">
-                    <label for="fname">Last Name:</label>
-                    <input type="text" id="lname" name="fname">
-                </div>
-                <div class="add-cart-label">
-                    <label for="mobile">Mobile phone Number:</label>
-                    <input type="text" id="phone" name="phone">
+                <div>
+                    <h4>Shipping Address</h4>
+                    <div class="add-cart-label">
+                        <label for="street name">street name:</label>
+                        <input type="text" id="street" name="street">
+                    </div>
+                    <div class="add-cart-label">
+                        <label for="postal code">postal code</label>
+                        <input type="text" id="postal-code" name="postal-code">
+                    </div>
                 </div>
             </div>
-            <div>
-                <h4>Shipping Address</h4>
-                <div class="add-cart-label">
-                    <label for="street name">street name:</label>
-                    <input type="text" id="street" name="street">
-                </div>
-                <div class="add-cart-label">
-                    <label for="postal code">postal code</label>
-                    <input type="text" id="postal-code" name="postal-code">
-                </div>
-            </div>
-        </div>
-        <div  class="column" style="border: 0px; background-color: white;">
-            <div style="display: flex; justify-content: space-between;">
+            <div  class="column mycart-container" >
                 <div>
                     <p id="cart-item-counter"></p>
                 </div>
-            </div>
-            <div id="cart-item-container">
-            </div>
-            <div style="text-align: center; margin-top: 20%;">
-                <div>
-                    <p><strong id="cart-item-price-total"></strong></p>
+                <div id="cart-item-container">
                 </div>
-                <div>
-                    <a href="checkout-success.html" class="button">Pay order</a>
-                </div>
-                <div class="row" style="justify-content: space-around; margin: 5%;">
-                    <img width="70" height="40" src="assets/images/krarna.png">
-                    <img width="70" height="40" src="assets/images/vipps.png">
-                    <img width="70" height="40" src="assets/images/mastercard.png">
-                    <img width="70" height="40" src="assets/images/visa.png">
+                <div class="payment-container">
+                    <div>
+                        <p><strong id="cart-item-price-total"></strong></p>
+                    </div>
+                    <div>
+                        <a href="checkout-success.html" class="button">Pay order</a>
+                    </div>
+                    <div class="row" style="justify-content: space-around; margin: 5%;">
+                        <img src="assets/images/krarna.png">
+                        <img src="assets/images/mastercard.png">
+                        <img src="assets/images/vipps.png">
+                        <img src="assets/images/visa.png">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="footercontainer">
+    </main>
+    <footer class="footercontainer">
         <div class="footernav">
-            <div>
-                <ul>
-<!--
-                    <li>Shop</li>
-                    <li><a href="women.html">Women</a></li>
-                    <li><a href="men.html">Men</a></li>
--->
-                </ul>
-            </div>
-            <div>
-                <ul>
-                    <li>Help</li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </div>
-            <div>
-                <ul>
-                    <li><a style="font-size: 15px;" href="about.html">About Us</a></li>
-                </ul>
-            </div>
+            <ul>
+                <!--
+                <li>Shop</li>
+                <li><a href="women.html">Women</a></li>
+                <li><a href="men.html">Men</a></li>
+                -->
+            </ul>
+            <ul>
+                <li><a href="#">Help</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <ul>
+                <li><a  href="about.html">About Us</a></li>
+            </ul>
         </div>
         <div style="display: flex; flex-direction: column; align-items: last baseline;">
-            <div>
-                <p style="color: white;">Follow Rainy Days</p>
-            </div>
+            <p style="color: white;">Follow Rainy Days</p>
             <div class="socialicons">
                 <a href=""><img src="assets/images/Social media/43-twitter-64.webp"></a>
                 <a href=""><img src="assets/images/Social media/Pinterest2_svg-64.webp"></a>
@@ -131,7 +123,7 @@
                 <a href=""><img src="assets/images/Social media/Facebook_svg-64.webp"></a>
             </div>
         </div>
-    </div>
+    </footer>
     <script src="js/add-to-cart.js"></script>
     <script src="js/cart-update.js"></script>
 </body>

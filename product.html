@@ -18,7 +18,7 @@
         <nav class="navbar">
             <div class="navdiv">
                 <a href="index.html">
-                    <img class="logo" src="assets/images/RainyDays_logo.svg" style="width: 80px; height: 80px"
+                    <img class="logo" src="assets/images/RainyDays_logo.svg"
                         alt="RainyDays Logo" />
                 </a>
                 <div class="nav-menu">
@@ -39,85 +39,72 @@
             </div>
         </nav>
     </header>
-    <div>
-        <div style="text-align: left; margin-left: 2%;">
+    <main>
+        <section>
             <h3 id="product-title-h3"></h3>
-        </div>
-
-        <div class="row">
-            <div id="product-container" class="column-show-item" >
-                <div class="column-show-item">
-                    <div class="item">
-                        <div class="product-loader-container">
-                            <div id="product-loader" class="loader"></div>
+            <div class="row">
+                <div id="product-container" class="column-show-item" >
+                    <div class="column-show-item">
+                        <div class="item">
+                            <div class="product-loader-container">
+                                <div id="product-loader" class="loader"></div>
+                            </div>
+                            <img id="product-img-big" src="" alt="">
                         </div>
-                        <img id="product-img-big" src="" alt="">
+                    </div>
+                </div>
+                <div  class="column-show-item product-size-container" >
+                    <div>
+                        <p class="product-title-p" ><b id="product-title-b"></b></p>
+                        <p class="product-title-nok" ><small>Nok </small><small id="product-price"></small></p>
+                    </div>
+                    <div >
+                        <p class="product-title-color-size" >color:</p><p id="product-color"></p>
+                    </div>
+                    <div >
+                        <p class="product-title-color-size">Product Size:</p>
+                    </div>
+                    <div id="product-sizes" class="row" >
+                        <div class="sizes">XS</div>
+                        <div class="sizes">S</div>
+                        <div class="sizes">M</div>
+                        <div class="sizes">L</div>
+                        <div class="sizes">XL</div>
+                    </div>
+                    <div class="row">
+                        <a href="#" id="add-to-cart" class="button">ADD TO CART</a>
+                    </div>
+                    <div class="row">
+                        <div id="successMessage">Product successfully added to the cart</div>
                     </div>
                 </div>
             </div>
-            <div  class="column-show-item" style="padding-left: 15%;">
-                <div>
-                    <p style="margin-bottom: 0px;"><b id="product-title-b"></b></p>
-                    <p style="margin-top: 0px;"><small>Nok </small><small id="product-price"></small></p>
-                </div>
-                <div style="text-align:left;">
-                    <p style="font-size: x-small;">color:</p><p id="product-color"></p>
-                </div>
-                <div style="text-align:left;">
-                    <p style="font-size: x-small;">Product Size:</p>
-                </div>
-                <div id="product-sizes" class="row" style="font-size:x-small; margin-bottom: 10%;">
-                    <div class="sizes">XS</div>
-                    <div class="sizes">S</div>
-                    <div class="sizes">M</div>
-                    <div class="sizes">L</div>
-                    <div class="sizes">XL</div>
-                </div>
-                <div class="row">
-                    <a href="#" id="add-to-cart" class="button">ADD TO CART</a>
-                </div>
-                <div class="row">
-                    <div id="successMessage">Product successfully added to the cart</div>
-                </div>
-            </div>
-        </div>
-        <div>
-            <div style="width: 50%; margin: 8%;">
+            <div class="product-details-container" >
                 <hr class="solid">
                 <h5 id="product-title-h5"></h5>
-                <p id="product-description" style="font-size: small;">
-                </p>
+                <p id="product-description"></p>
             </div>
-        </div>
-
-    </div>
-    <div class="footercontainer">
+        </section>
+    </main>
+    <footer class="footercontainer">
         <div class="footernav">
-            <div>
-                <ul>
-<!--
-                    <li>Shop</li>
-                    <li><a href="women.html">Women</a></li>
-                    <li><a href="men.html">Men</a></li>
--->
-                </ul>
-            </div>
-            <div>
-                <ul>
-                    <li>Help</li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </div>
-            <div>
-                <ul>
-                    <li><a style="font-size: 15px;" href="about.html">About Us</a></li>
-                </ul>
-            </div>
+            <ul>
+                <!--
+                <li>Shop</li>
+                <li><a href="women.html">Women</a></li>
+                <li><a href="men.html">Men</a></li>
+                -->
+            </ul>
+            <ul>
+                <li><a href="#">Help</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <ul>
+                <li><a  href="about.html">About Us</a></li>
+            </ul>
         </div>
         <div style="display: flex; flex-direction: column; align-items: last baseline;">
-            <div>
-                <p style="color: white;">Follow Rainy Days</p>
-            </div>
+            <p style="color: white;">Follow Rainy Days</p>
             <div class="socialicons">
                 <a href=""><img src="assets/images/Social media/43-twitter-64.webp"></a>
                 <a href=""><img src="assets/images/Social media/Pinterest2_svg-64.webp"></a>
@@ -125,7 +112,7 @@
                 <a href=""><img src="assets/images/Social media/Facebook_svg-64.webp"></a>
             </div>
         </div>
-    </div>
+    </footer>
     <script src="js/product.js"></script>
 </body>
 

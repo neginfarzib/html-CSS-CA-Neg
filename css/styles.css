@@ -13,7 +13,15 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
-
+.h1-main-page{
+  text-align: right;
+  padding: 5%;
+}
+.h2-main-page{
+  text-align: left;
+  padding: 5%;
+  color:white
+}
 #background_first{
   background-image: url(../assets/images/Norronare.jpg);
   min-height: 60vh;
@@ -91,6 +99,8 @@ nav a{
   }
   .logo{
     display: block;
+    width: 80px;
+    height: 80px
   }
   .nav-menu{
     display: flex;
@@ -122,7 +132,7 @@ nav a{
   width: 100%;
   padding: 20px;
   background-color: #3B515E;
-  border: 10px solid;
+  border: 2px solid;
   justify-content: space-between;
 }
 
@@ -153,13 +163,13 @@ nav a{
 
 .footernav ul li{
   list-style: none;
-  color: white;
+  margin: 25px;
 }
 
 .footernav ul li a{
-  color: white; font-size: 10px;  margin-right: 25px;
+  color: white;
+  font-size: 15px;
 }
-
 
 .footerbottom{
   background-color: aquamarine;
@@ -211,6 +221,24 @@ nav a{
   padding: 5px;
   margin: 5px;
 }
+.product-size-container{
+  padding-left: 15%;
+}
+.product-title-p{
+  margin-bottom: 0px;
+}
+.product-title-nok{
+  margin-top: 0px;
+}
+
+.product-title-color-size{
+  font-size: x-small;
+}
+#product-sizes{
+  font-size:x-small;
+  margin-bottom: 10%;
+}
+
 
 #backgroundw{
   background-image: url(../assets/images/istockphoto-1318164337-612x612.jpg);
@@ -242,6 +270,29 @@ nav a{
   background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: 3%;
+}
+.background-about-h{
+  text-align: left;
+  padding: 5%;
+}
+.shipping-container{
+  padding: 5%; border: 0px; background-color: white;
+}
+
+.mycart-container{
+  border: 0px; background-color: white;
+}
+.payment-container{
+  text-align: center;
+  margin-top: 20%;
+}
+
+.payment-container img{
+  width:70px;
+  height:40px;
+}
+.checkout-successful{
+  text-align: center;
 }
 
 .add-cart-label{
@@ -276,12 +327,47 @@ a.button {
   height: 30px;
 }
 
+#product-title-h3{
+  text-align: left;
+  margin-left: 2%;
+}
+
+.product-details-container{
+  width: 50%;
+  margin: 8%;
+}
+
+#product-description{
+  font-size: small;
+}
+.about-page-container{
+  justify-content: space-around;
+}
+
+.about-page-container img{
+  width: 400px;
+  height: 400px;
+}
 #product-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
   padding: 20px;
+}
+.submit-request-container{
+  width: 30%;
+}
+
+.submit-request-container button{
+  background-color: red;
+  width: 70%;
+  border:none;
+  border-radius: 12px
+}
+
+.submit-request-container button p{
+  color: white;
 }
 
 .product-box {
