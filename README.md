@@ -2,14 +2,12 @@
 ![RainyDays](https://github.com/user-attachments/assets/6b1e3e3a-a5e6-4853-b557-225056869a40)
 
 
-https://neginfarzib.github.io/html-CSS-CA-Neg/index.html
-
 # HTML & CSS Course Assignment
 
 ## Goal
-To put into practice everything you’ve learned about HTML and CSS over this course by bringing your design alive.
+An online raincoat store for men and women with smooth navigation, add-to-cart, checkout, and responsive design for all devices
 
-## Brief
+
 
 - You must deliver a properly functioning, responsive website for the assignment brief you chose in Design 1.
 
@@ -33,6 +31,10 @@ To put into practice everything you’ve learned about HTML and CSS over this co
 
 - You should not use copied code in your submission. All code submitted must be written by yourself. You may use external sources to show you how to achieve specific effects, which should be included in your report.
 
+- ## Built with  
+- HTML
+- CSS
+
 ## Process
 
 1. Clone the repository to your computer using GitHub Desktop.
@@ -49,10 +51,3 @@ To put into practice everything you’ve learned about HTML and CSS over this co
 14. Make adjustments based on the feedback you gather.
 15. Delivery in Moodle.
 
-## Submission
-
-You need to submit the following:
-
-1. A link to your GitHub repository. Your last commit must be before your deadline.
-2. A link to your website, live on GitHub Pages.
-3. A report using the [this](https://noroff.sharepoint.com/:w:/r/sites/FED1-August2023Full-time2/_layouts/15/Doc.aspx?sourcedoc=%7B1A563EDD-CF1A-4F1B-ABC2-DCAF79AB1344%7D&file=HTML%20_%20CSS%20CA%20Report.docx&action=default&mobileredirect=true&wdOrigin=TEAMS-ASSIGN-WEB.ASSIGN-STUD-VIEW.STUD) template.
