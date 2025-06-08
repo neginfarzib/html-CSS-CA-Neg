@@ -1,5 +1,9 @@
+# RainyDays
+![RainyDays](https://github.com/user-attachments/assets/6b1e3e3a-a5e6-4853-b557-225056869a40)
 
-![Alt text]([URL](https://neginfarzib.github.io/html-CSS-CA-Neg/index.html))
+
+https://neginfarzib.github.io/html-CSS-CA-Neg/index.html
+
 # HTML & CSS Course Assignment
 
 ## Goal
