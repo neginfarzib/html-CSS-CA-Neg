@@ -4,6 +4,10 @@
 
 # HTML & CSS Course Assignment
 
+🌐 Live website
+
+https://neginfarzib.github.io/html-CSS-CA-Neg/
+
 ## Goal
 An online raincoat store for men and women with smooth navigation, add-to-cart, checkout, and responsive design for all devices
 
